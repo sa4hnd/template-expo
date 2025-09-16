@@ -6,6 +6,7 @@
     "start": "expo start",
     "android": "expo start --android",
     "ios": "expo start --ios",
+    "dev": "echo fs.inotify.max_user_watches=524288 >> /etc/sysctl.conf && sysctl -p && npx expo start --tunnel --port 3000",
     "web": "expo start --web",
     "lint": "expo lint",
     "typecheck": "bunx tsc --noEmit"
@@ -20,7 +21,7 @@
     "@react-navigation/native": "^7.1.6",
     "@tanstack/react-query": "^5.85.5",
     "clsx": "^2.1.1",
-    "expo": "^54.0.0",
+    "expo": "^54.0.7",
     "expo-blur": "~15.0.7",
     "expo-clipboard": "~8.0.7",
     "expo-constants": "~18.0.8",
