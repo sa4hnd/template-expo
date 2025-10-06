@@ -6,7 +6,7 @@
     "start": "expo start",
     "android": "expo start --android",
     "ios": "expo start --ios",
-    "dev": "echo fs.inotify.max_user_watches=524288 >> /etc/sysctl.conf && sysctl -p && npx expo start --tunnel --port 3000",
+    "dev": "echo fs.inotify.max_user_watches=524288 >> /etc/sysctl.conf && sysctl -p && npx expo start --tunnel --port 3000 --minify 2>&1 | tee logs/dev-server.log",
     "dev:backend": "convex dev",
     "web": "expo start --web",
     "lint": "expo lint",

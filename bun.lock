@@ -2,7 +2,7 @@
   "lockfileVersion": 1,
   "workspaces": {
     "": {
-      "name": "steercode-project",
+      "name": "vibracode-project",
       "dependencies": {
         "@expo/metro-runtime": "~6.1.2",
         "@expo/ngrok": "^4.1.0",

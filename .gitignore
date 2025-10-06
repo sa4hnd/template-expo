@@ -40,4 +40,8 @@ yarn-error.*
 .vscode/
 
 # steercode
-.steercode/
+.vibracode/
+
+# logs
+logs/
+*.log
