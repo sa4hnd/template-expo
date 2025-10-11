@@ -13,4 +13,15 @@ config.cacheStores = ({ FileStore }) => [
   }),
 ];
 
+// Force Metro to use our modified source files instead of compiled ones
+config.resolver = {
+  ...config.resolver,
+  alias: {
+    ...config.resolver.alias,
+    // Force use of source files instead of compiled ones
+    '@expo/metro-runtime/build/error-overlay/UI/LogBoxStyle': path.resolve(__dirname, 'node_modules/@expo/metro-runtime/src/error-overlay/UI/LogBoxStyle.ts'),
+    '@expo/metro-runtime/build/error-overlay/overlay/LogBoxInspectorHeader': path.resolve(__dirname, 'node_modules/@expo/metro-runtime/src/error-overlay/overlay/LogBoxInspectorHeader.tsx'),
+  },
+};
+
 module.exports = withNativeWind(config, { input: "./global.css" });
